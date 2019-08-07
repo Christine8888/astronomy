@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(205,0,255);
+         color: RGB(155,0,205);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -96,8 +96,11 @@
         var x=0;
         var y=0;
         var magnitude=document.getElementById("Absolute Magnitude").value;
+        window.alert(magnitude);
         var letter=document.getElementById("Letter").value;
+        window.alert(letter);
         var number=document.getElementById("Number").value;
+        window.alert(number);
         if(letter=="O"){
           x=0;
           penRGB(0,187,255);
@@ -139,9 +142,11 @@
         }else if(number=="9"){
           x+=45;
         }
+        window.alert(x)
         y=magnitude+5;
         y=y*12.2;
         y=27+y;
+        window.alert(y)
         window.alert(x+","+y);
         window.alert("confirmation");
       }
