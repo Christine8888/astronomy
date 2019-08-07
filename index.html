@@ -103,12 +103,16 @@
         window.alert(letter=="O");
         var number=document.getElementById("Number").value;
         window.alert(number==7);
-        if(letter=="O"){
-          window.alert("works");
-          x=0;
-        }
+        x=determinex(letter);
         window.alert(x);
         }
+        }
+      function determinex(letter){
+        if(letter=="O"){
+          x=23;
+          return x;
+        }
+      }
       }
     </script>
   </body>
