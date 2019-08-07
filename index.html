@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(195,0,195);
+         color: RGB(135,0,135);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -27,9 +27,10 @@
       </style>
         UniverseLink Labs
     </h2>
-    <img src="http://cdn.thinglink.me/api/image/372740071884849152/1024/10/scaletowidth/0/0/1/1/false/true?wait=true">
+    <img id="diagram" src="http://cdn.thinglink.me/api/image/372740071884849152/1024/10/scaletowidth/0/0/1/1/false/true?wait=true">
+	  <canvas id="diagram" width=1024 height=623> </canvas>
     <style>
-      img {
+      canvas {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -92,7 +93,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-function coordinates(){
+    var c = document.getElementById("diagram");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("diagram");
+    ctx.drawImage(img, 1024, 623);
+    function coordinates(){
         var x=0;
         var y=0;
         window.alert(x)
