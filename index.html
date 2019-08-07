@@ -95,6 +95,8 @@
       function coordinates(){
         var x=0;
         var y=0;
+        window.alert(x)
+        window.alert(y)
         var magnitude=document.getElementById("Absolute Magnitude");
         window.alert(magnitude);
         var letter=document.getElementById("Letter");
@@ -103,7 +105,6 @@
         window.alert(number);
         if(letter=="O"){
           x=0;
-          window.alert("O");
           penRGB(0,187,255);
         }else if(letter=="B"){
           x=45;
@@ -125,23 +126,23 @@
           penRGB(255,0,0);
         }
         window.alert(x);
-        if(number=="1"){
+        if(number==1){
           x+=5;
-        }else if(number=="2"){
+        }else if(number==2){
           x+=10;
-        }else if(number=="3"){
+        }else if(number==3){
           x+=15;
-        }else if(number=="4"){
+        }else if(number==4){
           x+=20;
-        }else if(number=="5"){
+        }else if(number==5){
           x+=25;
-        }else if(number=="6"){
+        }else if(number==6){
           x+=30;
-        }else if(number=="7"){
+        }else if(number==7){
           x+=35;
-        }else if(number=="8"){
+        }else if(number==8){
           x+=40;
-        }else if(number=="9"){
+        }else if(number==9){
           x+=45;
         }
         window.alert(x)
