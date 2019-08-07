@@ -21,14 +21,13 @@
     <h2>
       <style>
         h2 {
-          color: RGB(135,0,135);
+          color: RGB(255,0,255);
           font-family: Courier New, Courier, Mono;
           text-align: center;
         }
       </style>
         UniverseLink Labs
     </h2>
-    <img id="diagram" src="http://cdn.thinglink.me/api/image/372740071884849152/1024/10/scaletowidth/0/0/1/1/false/true?wait=true" width="1024" height="623">
 	  <canvas id="hrdiagram" width="1024" height="623"> </canvas>
     <style>
       canvas {
@@ -91,8 +90,11 @@
       <script>
     var c = document.getElementById("hrdiagram");
     var ctx = c.getContext("2d");
-    var img = document.getElementById("diagram");
-    ctx.drawImage(img, 10, 10);
+    var img = new Image();
+	img.onload = function () {
+	    context.drawImage(img, 0, 0);
+	}
+	img.src = "blank hr.png";
     ctx.beginPath();
     ctx.arc(95, 50, 40, 0, 2 * Math.PI);
     function coordinates(){
