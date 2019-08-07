@@ -20,7 +20,7 @@
     <h2>
       <style>
         h2 {
-          color: RGB(0,0,255);
+          color: RGB(255,0,255);
           font-family: Courier New, Courier, Mono;
           text-align: center;
         }
@@ -98,17 +98,19 @@ function coordinates(){
         window.alert(x)
         window.alert(y)
         var magnitude=document.getElementById("Absolute Magnitude").value;
-        window.alert(magnitude==3);
+        window.alert(magnitude);
         var letter=document.getElementById("Letter").value;
-        window.alert(letter=="O");
+        window.alert(letter);
         var number=document.getElementById("Number").value;
-        window.alert(number==7);
+        window.alert(number);
         x=determinex(letter);
         window.alert(x);
         x=specifyx(number);
         window.alert(x);
 	magnitude+=5;
+	window.alert(magnitude);
         y=magnitude*12.2;
+	window.alert(y);
         y=27+y;
         window.alert(y)
 
