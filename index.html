@@ -97,6 +97,14 @@
 	img.src = "blank hr.png";
     ctx.beginPath();
     ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, 800, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 800, 280);
     function coordinates(){
         var x=0;
         var y=0;
