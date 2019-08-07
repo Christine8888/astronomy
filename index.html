@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(255,0,255);
+         color: RGB(195,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -92,7 +92,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-      function coordinates(){
+function coordinates(){
         var x=0;
         var y=0;
         window.alert(x)
@@ -105,11 +105,57 @@
         window.alert(number==7);
         x=determinex(letter);
         window.alert(x);
+        x=specifyx(number);
+        window.alert(x);
+				y=magnitude+5;
+        y=y*12.2;
+        y=27+y;
+        window.alert(y)
+
       }
       function determinex(letter){
         if(letter=="O"){
-          x=23;
+          x=0;
           return x;
+        }else if(letter=="B"){
+        	x=45;
+          return x;
+        }else if(letter=="A"){
+        	x=90;
+          return x;
+        }else if(letter=="F"){
+        	x=135;
+          return x;
+        }else if(letter=="G"){
+        	x=180;
+          return x;
+        }else if(letter=="K"){
+        	x=225;
+          return x;
+        }else if(letter=="M"){
+        	x=270;
+          return x;
+        }
+      }
+      function specifyx(number){
+      	if(number==1){
+          x+=5;
+        }else if(number==2){
+          x+=10;
+        }else if(number==3){
+          x+=15;
+        }else if(number==4){
+          x+=20;
+        }else if(number==5){
+          x+=25;
+        }else if(number==6){
+          x+=30;
+        }else if(number==7){
+          x+=35;
+        }else if(number==8){
+          x+=40;
+        }else if(number==9){
+          x+=45;
         }
       }
     </script>
