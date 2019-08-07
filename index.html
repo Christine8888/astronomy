@@ -28,15 +28,13 @@
         UniverseLink Labs
     </h2>
     <img id="diagram" src="http://cdn.thinglink.me/api/image/372740071884849152/1024/10/scaletowidth/0/0/1/1/false/true?wait=true">
-	  <canvas id="diagram" width=1024 height=623> </canvas>
+	  <canvas id="hrdiagram" width=1024 height=623> </canvas>
     <style>
       canvas {
-	position: absolute;
-    	top:0;
-    	bottom: 0;
-    	left: 200;
-    	right: 0;
-    	margin:auto;
+    	padding:0px 256px 0px 256px
+      }
+      img {
+	visibility: hidden;      
       }
     </style>
     <style>
@@ -47,7 +45,7 @@
         }
     </style>
     <font size="1"><p>Image Credits: https://www.thinglink.com/scene/372740071884849152</p></font>
-    <center><form onsubmit = "coordinates();">
+    <form onsubmit = "coordinates();"><center>
       <style>
         p {
           font-family: Courier New, Courier, Mono;
@@ -95,10 +93,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-    var c = document.getElementById("diagram");
+    var c = document.getElementById("hfdiagram");
     var ctx = c.getContext("2d");
     var img = document.getElementById("diagram");
-    ctx.drawImage(img, 1024, 623);
+    ctx.drawImage(img, 10, 10);
     ctx.beginPath();
     ctx.arc(95, 50, 40, 0, 2 * Math.PI);
     function coordinates(){
