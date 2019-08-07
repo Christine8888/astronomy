@@ -44,7 +44,7 @@
         }
     </style>
     <font size="1"><p>Image Credits: https://www.thinglink.com/scene/372740071884849152</p></font>
-    <center><form action = "">
+    <center><form onsubmit = "coordinates();">
       <style>
         p {
           font-family: Courier New, Courier, Mono;
@@ -91,5 +91,59 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      function coordinates(){
+        var x=0;
+        var y=0;
+        var magnitude=getNumber("luminosity");
+        var letter=getText("letter");
+        var number=getText("number");
+        if(letter=="O"){
+          x=0;
+          penRGB(0,187,255);
+        }else if(letter=="B"){
+          x=45;
+          penRGB(166,225,245);
+        }else if(letter=="A"){
+          x=90;
+          penRGB(240,240,255);
+        }else if(letter=="F"){
+          x=135;
+          penRGB(239,245,186);
+        }else if(letter=="G"){
+          x=181;
+          penRGB(255,255,0);
+        }else if(letter=="K"){
+          x=226;
+          penRGB(247,169,42)
+        }else if(letter=="M"){
+          x=272;
+          penRGB(255,0,0);
+        }
+        if(number=="1"){
+          x+=5;
+        }else if(number=="2"){
+          x+=10;
+        }else if(number=="3"){
+          x+=15;
+        }else if(number=="4"){
+          x+=20;
+        }else if(number=="5"){
+          x+=25;
+        }else if(number=="6"){
+          x+=30;
+        }else if(number=="7"){
+          x+=35;
+        }else if(number=="8"){
+          x+=40;
+        }else if(number=="9"){
+          x+=45;
+        }
+        y=magnitude+5;
+        y=y*12.2;
+        y=27+y;
+        window.alert(x+","+y);
+      }
+    </script>
   </body>
 </html>
