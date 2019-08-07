@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(195,0,255);
+         color: RGB(195,0,195);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -107,8 +107,8 @@ function coordinates(){
         window.alert(x);
         x=specifyx(number);
         window.alert(x);
-				y=magnitude+5;
-        y=y*12.2;
+	magnitude+=5;
+        y=magnitude*12.2;
         y=27+y;
         window.alert(y)
 
@@ -140,22 +140,31 @@ function coordinates(){
       function specifyx(number){
       	if(number==1){
           x+=5;
+	  return x;
         }else if(number==2){
           x+=10;
+	  return x;
         }else if(number==3){
           x+=15;
+	  return x;
         }else if(number==4){
           x+=20;
+	  return x;
         }else if(number==5){
           x+=25;
+	  return x;
         }else if(number==6){
           x+=30;
+	  return x;
         }else if(number==7){
           x+=35;
+	  return x;
         }else if(number==8){
           x+=40;
+	  return x;
         }else if(number==9){
           x+=45;
+	  return x;
         }
       }
     </script>
