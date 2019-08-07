@@ -95,9 +95,9 @@
       function coordinates(){
         var x=0;
         var y=0;
-        var magnitude=getNumber("luminosity");
-        var letter=getText("letter");
-        var number=getText("number");
+        var magnitude=document.getElementById("Absolute Magnitude").value;
+        var letter=document.getElementById("Letter").value;
+        var number=document.getElementById("Number").value;
         if(letter=="O"){
           x=0;
           penRGB(0,187,255);
