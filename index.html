@@ -31,12 +31,12 @@
 	  <canvas id="diagram" width=1024 height=623> </canvas>
     <style>
       canvas {
-        padding-left: 0;
-        padding-right: 0;
-	padding-top: 20;
-	padding-bottom: 20;
-        margin-left: auto;
-        margin-right: auto;
+	position: absolute;
+    	top:0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	margin:auto;
       }
     </style>
     <style>
@@ -99,6 +99,8 @@
     var ctx = c.getContext("2d");
     var img = document.getElementById("diagram");
     ctx.drawImage(img, 1024, 623);
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
     function coordinates(){
         var x=0;
         var y=0;
