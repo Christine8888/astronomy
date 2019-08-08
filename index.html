@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,0);
+         color: RGB(0,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -102,12 +102,6 @@
 	ctx.beginPath();
 	ctx.arc(10,600,5,0,2*Math.PI);
 	ctx.fill();
-test();
-function test(){
-	ctx.beginPath();
-ctx.arc(100, 75, 20, 0, 2 * Math.PI);
-ctx.stroke();
-}
 	    function refresh(){
 		  for(var i=0;i<allElementsX.length;i++){
 			allElementsX[i]=allElementsX[i]*1;
@@ -119,6 +113,8 @@ ctx.stroke();
 			ctx.arc(600, 600, 5, 0, 2 * Math.PI);
 			ctx.fill();
 			window.alert("doneinforloop");
+			window.alert(allElementsX);
+			window.alert(allElementsY);
 		  }
 		  ctx.beginPath();
 		  ctx.arc(100,100,5,0,2*Math.PI);
