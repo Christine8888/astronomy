@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,0);
+         color: RGB(0,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -100,13 +100,7 @@
 	var img = document.getElementById("hr");
 	
 	window.onload = function() {
-	  canvas = document.getElementById("hrdiagram");
-	  ctx = canvas.getContext("2d");
-	  img = document.getElementById("hr");
 	  ctx.drawImage(img, 0, 0);
-	  ctx.beginPath();
-	  ctx.arc(200,200,5,0,2*Math.PI);
-	  ctx.fill();
 	};
 	    function refresh(){
 		  for(var i=0;i<allElementsX.length;i++){
