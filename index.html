@@ -83,13 +83,13 @@
       <script>
 	var x=0;
 	var y=0;
+	var canvas = document.getElementById("hrdiagram");
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("hr");
+	ctx.drawImage(img, 0, 0);
 	    function coordinates(){
 		var allElementsX=[];
 		var allElementsY=[];
-		var canvas = document.getElementById("hrdiagram");
-		var ctx = canvas.getContext("2d");
-		var img = document.getElementById("hr");
-		ctx.drawImage(img, 0, 0);
 		x=0;
 		y=0;
 		var magnitude=document.getElementById("Absolute Magnitude").value;
