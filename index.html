@@ -4,65 +4,68 @@
 	<h1>
 	  Interactive Hertzprung-Russell Diagram
 	</h1>
-      <style>
-        h1 {
-         color: RGB(0,0,0);
-         font-family: Helvetica Narrow, sans-serif;
-         text-align: center;}
-        h2 {
-          color: RGB(0,0,0);
-          font-family: Helvetica Narrow, sans-serif;
-          text-align: center;
-        }
-	canvas{
-	  background-color:white;
-	  padding: 0px 0px 0px 0px;
-	  float: left;
-	}
-	body{
-	  background-image
-	}
-        img {    
-      	   display: none;
-        }
-	p {
-          font-family: Helvetica Narrow, sans-serif;
-          color: RGB(0,0,0);
-          text-align: center;
-        }
-        input[type=text] {
-          border: none;
-          font-family: Helvetica Narrow, sans-serif;
-          border-bottom: 3px solid black;
-          padding: 0px 0px 5px;
-        }
-        input[type=number] {
-          border: none;
-          font-family: Helvetica Narrow, sans-serif;
-          border-bottom: 3px solid black;
-          padding: 0px 0px 5px;
-        }
-	#tester {
-	  background-color: white;
-	  width: 150px;
-	  height: 435px;
-	  border: 15px solid lightblue;
-	  padding: 10px;
-	  float: right;
-	}
-	#special {
-	   width: 100px;
-	   height: 20px;
-	   border: 5px solid black;
-	   padding: 3px;
-	}
-	      h3{
-		      visibility: hidden;
-	      }
+	<style>
+		h1 {
+		  color: RGB(0,0,0);
+		  font-family: Helvetica Narrow, sans-serif;
+		  text-align: center;}
+		h2 {
+		  color: RGB(0,0,0);
+		  font-family: Helvetica Narrow, sans-serif;
+		  text-align: center;
+		}
+		canvas{
+		  background-color:white;
+		  padding: 0px 0px 0px 0px;
+		  float: left;
+		  margin-left: 10px;
+		}
+		img {    
+		   display: none;
+		}
+		p {
+		  font-family: Helvetica Narrow, sans-serif;
+		  color: RGB(0,0,0);
+		  text-align: center;
+		}
+		input[type=text] {
+		  border: none;
+		  font-family: Helvetica Narrow, sans-serif;
+		  border-bottom: 3px solid black;
+		  padding: 0px 0px 5px;
+		}
+		input[type=number] {
+		  border: none;
+		  font-family: Helvetica Narrow, sans-serif;
+		  border-bottom: 3px solid black;
+		  padding: 0px 0px 5px;
+		}
+		#tester {
+		  background-color: white;
+		  width: 150px;
+		  height: 435px;
+		  border: 15px solid lightblue;
+		  padding: 10px;
+		  float: right;
+		  margin-right: 10px
+		}
+		#special {
+		   width: 100px;
+		   height: 20px;
+		   border: 5px solid black;
+		   padding: 3px;
+		}
+		h3{
+		   visibility: hidden;
+	        }
+		form{
+		   position: absolute;
+		   margin: auto;
+		}
       </style>
-    <h2>
-        GRISM Summmer 2019
-    </h2>
+	<h2>
+	    GRISM Summmer 2019
+	</h2>
 	  <div>
 		   <canvas id="hrdiagram" width="1024" height="623"> </canvas>
 		  <font size="2"><p id="tester">Instructions:
