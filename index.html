@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,255);
+         color: RGB(0,0,0);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -99,6 +99,9 @@
 	var ctx = canvas.getContext("2d");
 	var img = document.getElementById("hr");
 	ctx.drawImage(img, 0, 0);
+	ctx.beginPath();
+	ctx.arc(10,600,5,0,2*Math.PI);
+	ctx.fill();
 	    function refresh(){
 		  for(var i=0;i<allElementsX.length;i++){
 			allElementsX[i]=allElementsX[i]*1;
