@@ -1,5 +1,4 @@
 <!doctype html>
-<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -11,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,255);
+         color: RGB(185,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -89,16 +88,17 @@
       </center></form>
 	 <img id="hr" src="blank hr.png"></img>
       <script>
-	window.onload = function() {
-		  var canvas = document.getElementById("hrdiagram");
-		  var ctx = canvas.getContext("2d");
-		  var img = document.getElementById("hr");
-	}
 	var x=0;
 	var y=0;
-	var allElementsX=[];
-	var allElementsY=[];
-	    refresh();
+	window.onload = function() {
+	  var canvas = document.getElementById("hrdiagram");
+	  var ctx = canvas.getContext("2d");
+	  var img = document.getElementById("hr");
+	  ctx.drawImage(img, 0, 0);
+	  ctx.beginPath();
+	  ctx.arc(200,200,5,0,2*Math.PI);
+	  ctx.fill();
+	};
 	    function coordinates(){
 		x=0;
 		y=0;
@@ -107,15 +107,11 @@
 		var number=document.getElementById("Number").value;
 		x=determinex(letter);
 		x=specifyx(number);
-		allElementsX.push(x);
 		magnitude=magnitude*1;
 		magnitude=magnitude+15;
 		y=magnitude*14.37;
 		y=63+y;
-		allElementsY.push(y);
 		window.alert(x+","+y);
-		window.alert(allElementsX);
-		window.alert(allElementsY);
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
@@ -171,7 +167,6 @@
 		  return x;
 		}
 	      }
-	     }
     </script>
   </body>
 </html>
