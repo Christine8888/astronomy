@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(185,0,255);
+         color: RGB(145,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -90,10 +90,16 @@
       <script>
 	var x=0;
 	var y=0;
+	var allElementsX=[];
+	var allElementsY=[];
+	var canvas = document.getElementById("hrdiagram");
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("hr");
+
 	window.onload = function() {
-	  var canvas = document.getElementById("hrdiagram");
-	  var ctx = canvas.getContext("2d");
-	  var img = document.getElementById("hr");
+	  canvas = document.getElementById("hrdiagram");
+	  ctx = canvas.getContext("2d");
+	  img = document.getElementById("hr");
 	  ctx.drawImage(img, 0, 0);
 	  ctx.beginPath();
 	  ctx.arc(200,200,5,0,2*Math.PI);
