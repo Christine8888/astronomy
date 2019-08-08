@@ -1,16 +1,99 @@
 <!doctype html>
 <html lang="en">
   <body>
+    <h1>
+      <style>
+       h1 {
+         color: RGB(0,0,0);
+         font-family: Courier New, Courier, Mono;
+         text-align: center;}
+      </style>
+      Interactive H-R Diagram
+    </h1>
+
+    <h2>
+      <style>
+        h2 {
+          color: RGB(0,0,0);
+          font-family: Courier New, Courier, Mono;
+          text-align: center;
+        }
+	body{
+	  background-color:lightblue;	
+	}
+      </style>
+        UniverseLink Labs
+    </h2>
+	  <canvas id="hrdiagram" width="1024" height="623"> </canvas>
+    <style>
+      canvas {
+    	padding:0px 256px 0px 256px
+      }
+      img {    
+      visibility: hidden;
+      }
+    </style>
+    <style>
+      p {
+          font-family: Courier New, Courier, Mono;
+          color: RGB(0,0,0);
+          text-align: center;
+        }
+    </style>
+    <font size="1"><p>Image Credits: https://www.thinglink.com/scene/372740071884849152</p></font>
+    <form><center>
+      <style>
+        p {
+          font-family: Courier New, Courier, Mono;
+          color: RGB(0,0,0);
+          text-align: center;
+        }
+        input[type=text] {
+          border: none;
+          font-family: Courier New, Courier, Mono;
+          border-bottom: 4px solid black;
+          padding: 0px 0px 5px;
+        }
+        input[type=number] {
+          border: none;
+          font-family: Courier New, Courier, Mono;
+          border-bottom: 4px solid black;
+          padding: 0px 0px 5px;
+        }
+        button {
+          font-family: Courier New, Courier, Mono;
+          padding: 7px 7px;
+        }
+      </style>
+      <p>Enter Absolute Magnitude (Y-Axis)</p>
+      <div>
+        <label for="Absolute Magnitude">Absolute Magnitude:</label>
+        <input type="number" id="Absolute Magnitude">
+      </div>
+      <p>Enter Spectral Class (X-axis)</p>
+      <div>
+        <label for="Letter">Letter/Spectral Class:</label>
+        <input type="text" id="Letter">
+      </div>
+      <div>
+        <label for="Number">Number/Spectral Class</label>
+        <input type="number" id="Number">
+      </div>
+      <div class="button">
+        <button onclick ="coordinates()">Create Star</button>
+      </div>
+      </center></form>
+	 <img id="hr" src="blank hr.png">
       <script>
 	var x=0;
 	var y=0;
-	var allElementsX=[];
-	var allElementsY=[];
-	var canvas = document.getElementById("hrdiagram");
-	var ctx = canvas.getContext("2d");
-	var img = document.getElementById("hr");
-	ctx.drawImage(img, 0, 0);
 	    function coordinates(){
+		var allElementsX=[];
+		var allElementsY=[];
+		var canvas = document.getElementById("hrdiagram");
+		var ctx = canvas.getContext("2d");
+		var img = document.getElementById("hr");
+		ctx.drawImage(img, 0, 0);
 		x=0;
 		y=0;
 		var magnitude=document.getElementById("Absolute Magnitude").value;
@@ -91,88 +174,5 @@
 		}
 	      }
     </script>
-    <h1>
-      <style>
-       h1 {
-         color: RGB(0,0,0);
-         font-family: Courier New, Courier, Mono;
-         text-align: center;}
-      </style>
-      Interactive H-R Diagram
-    </h1>
-
-    <h2>
-      <style>
-        h2 {
-          color: RGB(0,0,255);
-          font-family: Courier New, Courier, Mono;
-          text-align: center;
-        }
-	body{
-	  background-color:lightblue;	
-	}
-      </style>
-        UniverseLink Labs
-    </h2>
-	  <canvas id="hrdiagram" width="1024" height="623"> </canvas>
-    <style>
-      canvas {
-    	padding:0px 256px 0px 256px
-      }
-      img {    
-      visibility: hidden;
-      }
-    </style>
-    <style>
-      p {
-          font-family: Courier New, Courier, Mono;
-          color: RGB(0,0,0);
-          text-align: center;
-        }
-    </style>
-    <font size="1"><p>Image Credits: https://www.thinglink.com/scene/372740071884849152</p></font>
-    <form><center>
-      <style>
-        p {
-          font-family: Courier New, Courier, Mono;
-          color: RGB(0,0,0);
-          text-align: center;
-        }
-        input[type=text] {
-          border: none;
-          font-family: Courier New, Courier, Mono;
-          border-bottom: 4px solid black;
-          padding: 0px 0px 5px;
-        }
-        input[type=number] {
-          border: none;
-          font-family: Courier New, Courier, Mono;
-          border-bottom: 4px solid black;
-          padding: 0px 0px 5px;
-        }
-        button {
-          font-family: Courier New, Courier, Mono;
-          padding: 7px 7px;
-        }
-      </style>
-      <p>Enter Absolute Magnitude (Y-Axis)</p>
-      <div>
-        <label for="Absolute Magnitude">Absolute Magnitude:</label>
-        <input type="number" id="Absolute Magnitude">
-      </div>
-      <p>Enter Spectral Class (X-axis)</p>
-      <div>
-        <label for="Letter">Letter/Spectral Class:</label>
-        <input type="text" id="Letter">
-      </div>
-      <div>
-        <label for="Number">Number/Spectral Class</label>
-        <input type="number" id="Number">
-      </div>
-      <div class="button">
-        <button onclick ="coordinates()">Create Star</button>
-      </div>
-      </center></form>
-	 <img id="hr" src="blank hr.png">
   </body>
 </html>
