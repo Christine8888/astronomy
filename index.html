@@ -14,7 +14,7 @@
     <h2>
       <style>
         h2 {
-          color: RGB(0,0,0);
+          color: RGB(0,0,255);
           font-family: Courier New, Courier, Mono;
           text-align: center;
         }
@@ -85,18 +85,16 @@
 	var y=0;
 	var canvas = document.getElementById("hrdiagram");
 	var ctx = canvas.getContext("2d");
-  ctx.strokeStyle = "#FF0000";
 	var img = document.getElementById("hr");
 	ctx.drawImage(img, 0, 0);
 	    function coordinates(){
-
 		var allElementsX=[];
 		var allElementsY=[];
 		x=0;
 		y=0;
 		var magnitude=document.getElementById("Absolute Magnitude").value;
 		var letter=document.getElementById("Letter").value;
-    if(letter=="O"){
+    		if(letter=="O"){
 		  ctx.strokeStyle = "#00BBFF";
 		}else if(letter=="B"){
 		  ctx.strokeStyle = "#A6E1F5";
@@ -123,8 +121,7 @@
 		  for(var i=0;i<allElementsX.length;i++){
 			allElementsX[i]=allElementsX[i]*1;
 			allElementsY[i]=allElementsY[i]*1
-      ctx.strokeStyle="rgb(25,255,255)"
-      ctx.beginPath();
+      			ctx.beginPath();
 			ctx.arc(allElementsX[i], allElementsY[i], 7, 0, 2 * Math.PI);
 			ctx.fill();
 		  }
