@@ -94,6 +94,9 @@ window.onload = function() {
   var ctx = canvas.getContext("2d");
   var img = document.getElementById("hr");
   ctx.drawImage(img, 0, 0);
+	ctx.beginPath();
+	ctx.arc(30, 30, 50, 0, 2 * Math.PI);
+	ctx.fill();
 };
     function coordinates(){
         var x=0;
