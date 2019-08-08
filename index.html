@@ -116,7 +116,7 @@
 	ctx.drawImage(img, 0, 0);
 	    function coordinates(){
 		var allElementsX=[345.02999,950.22857,913.34285696,802.3571427,829.242856,627.59999988,869.5714286,748.58571414,762.02857128];
-		var allElementsY=[236.3865,437.251667535,415.141374837,386.3362007502,396.7089341076,347.891000661,419.2933416,346.037357,352.59667373];
+		var allElementsY=[439.119334206,437.251667535,415.141374837,386.3362007502,396.7089341076,347.891000661,419.2933416,346.037357,352.59667373];
 		var allElementsColor=["#F0F0FF","FF0000","FF0000","F7A82A","F7A82A","FFFF00","FF0000","F7A82A","F7A82A"];
 		x=0;
 		y=0;
@@ -157,6 +157,7 @@
 			allElementsX[i]=allElementsX[i]*1;
 			allElementsY[i]=allElementsY[i]*1
       			ctx.beginPath();
+			window.alert(allElementsColor[i]);
 			ctx.fillStyle=allElementsColor[i];
 			ctx.arc(allElementsX[i], allElementsY[i], 7, 0, 2 * Math.PI);
 			ctx.fill();
