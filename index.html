@@ -4,7 +4,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,255);
+         color: RGB(0,0,0);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -93,37 +93,38 @@
 		x=0;
 		y=0;
 		var magnitude=document.getElementById("Absolute Magnitude").value;
-		var letter=document.getElementById("Letter").value;
-    		if(letter=="O"){
-		  ctx.strokeStyle = "#00BBFF";
-		}else if(letter=="B"){
-		  ctx.strokeStyle = "#A6E1F5";
-		}else if(letter=="A"){
-		  ctx.strokeStyle = "#F0F0FF";
-		}else if(letter=="F"){
-		  ctx.strokeStyle = "#EFF5BA";
-		}else if(letter=="G"){
-		  ctx.strokeStyle = "#FFFF00";
-		}else if(letter=="K"){
-		  ctx.strokeStyle = "#F7A82A";
-		}else if(letter=="M"){
-		  ctx.strokeStyle = "#FF0000";
-		}
-		var number=document.getElementById("Number").value;
-		x=determinex(letter);
-		x=specifyx(number);
-		allElementsX.push(x);
 		magnitude=magnitude*1;
 		magnitude=magnitude+15;
 		y=magnitude*14.37;
 		y=63+y;
 		allElementsY.push(y);
+		var letter=document.getElementById("Letter").value;
+            if(letter=="O"){
+              ctx.fillStyle = "#00BBFF";
+            }else if(letter=="B"){
+              ctx.fillStyle = "#A6E1F5";
+            }else if(letter=="A"){
+              ctx.fillStyle = "#F0F0FF";
+            }else if(letter=="F"){
+              ctx.fillStyle = "#EFF5BA";
+            }else if(letter=="G"){
+              ctx.fillStyle = "#FFFF00";
+            }else if(letter=="K"){
+              ctx.fillStyle = "#F7A82A";
+            }else if(letter=="M"){
+              ctx.fillStyle = "#FF0000";
+            }
+		var number=document.getElementById("Number").value;
+		x=determinex(letter);
+		x=specifyx(number);
+		allElementsX.push(x);
 		  for(var i=0;i<allElementsX.length;i++){
 			allElementsX[i]=allElementsX[i]*1;
 			allElementsY[i]=allElementsY[i]*1
       			ctx.beginPath();
 			ctx.arc(allElementsX[i], allElementsY[i], 7, 0, 2 * Math.PI);
 			ctx.fill();
+			ctx.closePath();
 		  }
 	      }
 	      function determinex(letter){
