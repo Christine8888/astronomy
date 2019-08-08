@@ -11,7 +11,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,255);
+         color: RGB(255,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -28,6 +28,7 @@
       </style>
         UniverseLink Labs
     </h2>
+	  <img id="hr" src="blank hr.png"></img>
 	  <canvas id="hrdiagram" width="1024" height="623"> </canvas>
     <style>
       canvas {
@@ -88,22 +89,12 @@
       </div>
       </center></form>
       <script>
-    var c = document.getElementById("hrdiagram");
-    var ctx = c.getContext("2d");
-    var img = new Image();
-    img.src = "blank hr.png";
-	img.onload = function () {
-	    context.drawImage(img, 0, 0);
-	}
-	
-// Create gradient
-var grd = ctx.createLinearGradient(0, 0, 1024, 0);
-grd.addColorStop(0, "red");
-grd.addColorStop(1, "white");
-
-// Fill with gradient
-ctx.fillStyle = grd;
-ctx.fillRect(0, 0, 1024, 623);
+window.onload = function() {
+  var canvas = document.getElementById("hrdiagram");
+  var ctx = canvas.getContext("2d");
+  var img = document.getElementById("hr");
+  ctx.drawImage(img, 0, 0);
+};
     function coordinates(){
         var x=0;
         var y=0;
