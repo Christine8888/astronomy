@@ -1,10 +1,100 @@
 <!doctype html>
 <html lang="en">
   <body>
+      <script>
+	var x=0;
+	var y=0;
+	var allElementsX=[];
+	var allElementsY=[];
+	var canvas = document.getElementById("hrdiagram");
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("hr");
+	ctx.drawImage(img, 0, 0);
+	    function coordinates(){
+		x=0;
+		y=0;
+		var magnitude=document.getElementById("Absolute Magnitude").value;
+		var letter=document.getElementById("Letter").value;
+		var number=document.getElementById("Number").value;
+		x=determinex(letter);
+		x=specifyx(number);
+		allElementsX.push(x);
+		magnitude=magnitude*1;
+		magnitude=magnitude+15;
+		y=magnitude*14.37;
+		y=63+y;
+		allElementsY.push(y);
+		  for(var i=0;i<allElementsX.length;i++){
+			allElementsX[i]=allElementsX[i]*1;
+			allElementsY[i]=allElementsY[i]*1
+			ctx.beginPath();
+			ctx.arc(allElementsX[i], allElementsY[i], 5, 0, 2 * Math.PI);
+			ctx.fill();
+			window.alert("doneinforloop");
+			window.alert(allElementsX);
+			window.alert(allElementsY);
+		  }
+		  window.alert("doneoutsideforloop");
+	      }
+	      function determinex(letter){
+		if(letter=="O"){
+		  x=63;
+		  return x;
+		}else if(letter=="B"){
+		  x=197.4;
+		  return x;
+		}else if(letter=="A"){
+		  x=331.9;
+		  return x;
+		}else if(letter=="F"){
+		  x=466.3;
+		  return x;
+		}else if(letter=="G"){
+		  x=600.7;
+		  return x;
+		}else if(letter=="K"){
+		  x=735.1;
+		  return x;
+		}else if(letter=="M"){
+		  x=869.6;
+		  return x;
+		}
+	      }
+	      function specifyx(number){
+		if(number==1){
+		  x+=13.4;
+		  return x;
+		}else if(number==2){
+		  x+=26.9;
+		  return x;
+		}else if(number==3){
+		  x+=40.3;
+		  return x;
+		}else if(number==4){
+		  x+=53.8;
+		  return x;
+		}else if(number==5){
+		  x+=67.2;
+		  return x;
+		}else if(number==6){
+		  x+=80.7;
+		  return x;
+		}else if(number==7){
+		  x+=94.1;
+		  return x;
+		}else if(number==8){
+		  x+=107.5;
+		  return x;
+		}else if(number==9){
+		  x+=121;
+		  return x;
+		}
+	      }
+    </script>
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,255);
+         color: RGB(0,0,0);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -84,98 +174,5 @@
       </div>
       </center></form>
 	 <img id="hr" src="blank hr.png">
-      <script>
-	var x=0;
-	var y=0;
-	var allElementsX=[];
-	var allElementsY=[];
-	var canvas = document.getElementById("hrdiagram");
-	var ctx = canvas.getContext("2d");
-	var img = document.getElementById("hr");
-	ctx.drawImage(img, 0, 0);
-	    function coordinates(){
-		x=0;
-		y=0;
-		var magnitude=document.getElementById("Absolute Magnitude").value;
-		var letter=document.getElementById("Letter").value;
-		var number=document.getElementById("Number").value;
-		x=determinex(letter);
-		x=specifyx(number);
-		allElementsX.push(x);
-		magnitude=magnitude*1;
-		magnitude=magnitude+15;
-		y=magnitude*14.37;
-		y=63+y;
-		allElementsY.push(y);
-		  for(var i=0;i<allElementsX.length;i++){
-			allElementsX[i]=allElementsX[i]*1;
-			allElementsY[i]=allElementsY[i]*1
-			ctx.beginPath();
-			ctx.arc(allElementsX[i], allElementsY[i], 5, 0, 2 * Math.PI);
-			ctx.fill();
-       			ctx.beginPath();
-			ctx.arc(600, 600, 5, 0, 2 * Math.PI);
-			ctx.fill();
-			window.alert("doneinforloop");
-			window.alert(allElementsX);
-			window.alert(allElementsY);
-		  }
-		  window.alert("doneoutsideforloop");
-	      }
-	      function determinex(letter){
-		if(letter=="O"){
-		  x=63;
-		  return x;
-		}else if(letter=="B"){
-		  x=197.4;
-		  return x;
-		}else if(letter=="A"){
-		  x=331.9;
-		  return x;
-		}else if(letter=="F"){
-		  x=466.3;
-		  return x;
-		}else if(letter=="G"){
-		  x=600.7;
-		  return x;
-		}else if(letter=="K"){
-		  x=735.1;
-		  return x;
-		}else if(letter=="M"){
-		  x=869.6;
-		  return x;
-		}
-	      }
-	      function specifyx(number){
-		if(number==1){
-		  x+=13.4;
-		  return x;
-		}else if(number==2){
-		  x+=26.9;
-		  return x;
-		}else if(number==3){
-		  x+=40.3;
-		  return x;
-		}else if(number==4){
-		  x+=53.8;
-		  return x;
-		}else if(number==5){
-		  x+=67.2;
-		  return x;
-		}else if(number==6){
-		  x+=80.7;
-		  return x;
-		}else if(number==7){
-		  x+=94.1;
-		  return x;
-		}else if(number==8){
-		  x+=107.5;
-		  return x;
-		}else if(number==9){
-		  x+=121;
-		  return x;
-		}
-	      }
-    </script>
   </body>
 </html>
