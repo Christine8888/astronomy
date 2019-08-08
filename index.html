@@ -4,7 +4,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,255);
+         color: RGB(0,0,0);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -14,7 +14,7 @@
     <h2>
       <style>
         h2 {
-          color: RGB(0,0,255);
+          color: RGB(0,0,0);
           font-family: Courier New, Courier, Mono;
           text-align: center;
         }
@@ -107,31 +107,38 @@
 			allElementsX[i]=allElementsX[i]*1;
 			allElementsY[i]=allElementsY[i]*1
 			ctx.beginPath();
-			ctx.arc(allElementsX[i], allElementsY[i], 5, 0, 2 * Math.PI);
+			ctx.arc(allElementsX[i], allElementsY[i], 7, 0, 2 * Math.PI);
 			ctx.fill();
 		  }
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
 		  x=63;
+		  ctx.strokeStyle = "#00BBFF";
 		  return x;
 		}else if(letter=="B"){
 		  x=197.4;
+		  ctx.strokeStyle = "#A6E1F5";
 		  return x;
 		}else if(letter=="A"){
 		  x=331.9;
+		  ctx.strokeStyle = "#F0F0FF";
 		  return x;
 		}else if(letter=="F"){
 		  x=466.3;
+		  ctx.strokeStyle = "#EFF5BA";
 		  return x;
 		}else if(letter=="G"){
 		  x=600.7;
+		  ctx.strokeStyle = "#FFFF00";
 		  return x;
 		}else if(letter=="K"){
 		  x=735.1;
+		  ctx.strokeStyle = "#F7A82A";
 		  return x;
 		}else if(letter=="M"){
 		  x=869.6;
+		  ctx.strokeStyle = "#FF0000";
 		  return x;
 		}
 	      }
