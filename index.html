@@ -20,7 +20,7 @@
     <h2>
       <style>
         h2 {
-          color: RGB(0,0,0);
+          color: RGB(0,0,255);
           font-family: Courier New, Courier, Mono;
           text-align: center;
         }
@@ -104,8 +104,13 @@
 	};
 	    function refresh(){
 		  for(var i=0;i<allElementsX.length;i++){
+			allElementsX[i]=allElementsX[i]*1;
+			allElementsY[i]=allElementsY[i]*1
 			ctx.beginPath();
 			ctx.arc(allElementsX[i], allElementsY[i], 5, 0, 2 * Math.PI);
+			ctx.fill();
+       			ctx.beginPath();
+			ctx.arc(600, 600, 5, 0, 2 * Math.PI);
 			ctx.fill();
 			window.alert(allElementsX[i]);
 			window.alert(allElementsY[i]);
