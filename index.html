@@ -7,6 +7,13 @@
 
   </head>
   <body>
+<h1 onclick="changeText(this)">Click on this text!</h1>
+
+<script>
+function changeText(id) { 
+  id.innerHTML = "Ooops!";
+}
+</script>
     <h1>
       <style>
        h1 {
@@ -132,9 +139,9 @@
 		y=magnitude*14.37;
 		y=63+y;
 		allElementsY.push(y);
-		window.alert("donebeforerefresh");
+		window.alert("x");
 		refresh();
-		window.alert("doneafterrefresh");
+		window.alert("y");
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
