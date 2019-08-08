@@ -94,6 +94,9 @@ window.onload = function() {
   var ctx = canvas.getContext("2d");
   var img = document.getElementById("hr");
   ctx.drawImage(img, 0, 0);
+  ctx.beginPath();
+  ctx.arc(200,200,5,0,2*Math.PI);
+  ctx.fill();
   function coordinates(){
         var x=0;
         var y=0;
@@ -106,6 +109,7 @@ window.onload = function() {
 	magnitude=magnitude+15;
         y=magnitude*14.37;
         y=63+y;
+	window.alert(x+","+y);
 	ctx.beginPath();
   	ctx.arc(x, y, 5, 0, 2 * Math.PI);
   	ctx.fill();
