@@ -120,11 +120,14 @@
 		var number=document.getElementById("Number").value;
 		x=determinex(letter);
 		x=specifyx(number);
+		allElementsX.push(x);
 		magnitude=magnitude*1;
 		magnitude=magnitude+15;
 		y=magnitude*14.37;
 		y=63+y;
+		allElementsY.push(y);
 		window.alert(x+","+y);
+		refresh();
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
