@@ -4,7 +4,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,0);
+         color: RGB(0,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -60,10 +60,6 @@
           border-bottom: 4px solid black;
           padding: 0px 0px 5px;
         }
-        button {
-          font-family: Courier New, Courier, Mono;
-          padding: 7px 7px;
-        }
       </style>
       <p>Enter Absolute Magnitude (Y-Axis)</p>
       <div>
@@ -79,8 +75,8 @@
         <label for="Number">Number/Spectral Class</label>
         <input type="number" id="Number">
       </div>
-      <div class="button">
-        <button onclick ="coordinates()">Create Star</button>
+      <div>
+        <p onclick ="coordinates()">Create Star</p>
       </div>
       </center></form>
 	 <img id="hr" src="blank hr.png">
