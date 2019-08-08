@@ -20,7 +20,7 @@
     <h2>
       <style>
         h2 {
-          color: RGB(0,0,255);
+          color: RGB(0,0,0);
           font-family: Courier New, Courier, Mono;
           text-align: center;
         }
@@ -109,11 +109,12 @@
        			ctx.beginPath();
 			ctx.arc(600, 600, 5, 0, 2 * Math.PI);
 			ctx.fill();
-			window.alert("done");
+			window.alert("doneinforloop");
 		  }
 		  ctx.beginPath();
 		  ctx.arc(100,100,5,0,2*Math.PI);
 		  ctx.fill();
+		  window.alert("doneoutsideforloop");
 	     };
 	    function coordinates(){
 		x=0;
@@ -129,7 +130,9 @@
 		y=magnitude*14.37;
 		y=63+y;
 		allElementsY.push(y);
+		window.alert("donebeforerefresh");
 		refresh();
+		window.alert("doneafterrefresh");
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
