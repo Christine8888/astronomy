@@ -115,31 +115,39 @@
 	var img = document.getElementById("hr");
 	ctx.drawImage(img, 0, 0);
 	    function coordinates(){
-		var allElementsX=[];
-		var allElementsY=[];
+		var allElementsX=[345.02999,950.22857,913.34285696,802.3571427,829.242856,627.59999988,869.5714286,748.58571414,762.02857128];
+		var allElementsY=[236.3865,437.251667535,415.141374837,386.3362007502,396.7089341076,347.891000661,419.2933416,346.037357,352.59667373];
+		var allElementsColor=["#F0F0FF","FF0000","FF0000","F7A82A","F7A82A","FFFF00","FF0000","F7A82A","F7A82A"];
 		x=0;
 		y=0;
 		var magnitude=document.getElementById("Absolute Magnitude").value;
 		magnitude=magnitude*1;
 		magnitude=magnitude+15;
-		y=magnitude*14.37;
+		y=magnitude*14.366667;
 		y=63+y;
 		allElementsY.push(y);
 		var letter=document.getElementById("Letter").value;
             if(letter=="O"){
               ctx.fillStyle = "#00BBFF";
+	      allElementsColor.push("#00BBFF");
             }else if(letter=="B"){
               ctx.fillStyle = "#A6E1F5";
+	      allElementsColor.push("#A6E1F5");
             }else if(letter=="A"){
               ctx.fillStyle = "#F0F0FF";
+	      allElementsColor.push("#F0F0FF");
             }else if(letter=="F"){
               ctx.fillStyle = "#EFF5BA";
+	      allElementsColor.push("EFF5BA");
             }else if(letter=="G"){
               ctx.fillStyle = "#FFFF00";
+		    allElementsColor.push("FFFF00");
             }else if(letter=="K"){
               ctx.fillStyle = "#F7A82A";
+		    allElementsColor.push("F7A82A");
             }else if(letter=="M"){
               ctx.fillStyle = "#FF0000";
+		    allElementsColor.push("FF0000");
             }
 		var number=document.getElementById("Number").value;
 		x=determinex(letter);
@@ -149,6 +157,7 @@
 			allElementsX[i]=allElementsX[i]*1;
 			allElementsY[i]=allElementsY[i]*1
       			ctx.beginPath();
+			ctx.fillStyle=allElementsColor[i];
 			ctx.arc(allElementsX[i], allElementsY[i], 7, 0, 2 * Math.PI);
 			ctx.fill();
 			ctx.closePath();
@@ -159,52 +168,52 @@
 		  x=63;
 		  return x;
 		}else if(letter=="B"){
-		  x=197.4;
+		  x=197.4285714;
 		  return x;
 		}else if(letter=="A"){
-		  x=331.9;
+		  x=331.8571428;
 		  return x;
 		}else if(letter=="F"){
-		  x=466.3;
+		  x=466.2857142;
 		  return x;
 		}else if(letter=="G"){
-		  x=600.7;
+		  x=600.7142856;
 		  return x;
 		}else if(letter=="K"){
-		  x=735.1;
+		  x=735.142857;
 		  return x;
 		}else if(letter=="M"){
-		  x=869.6;
+		  x=869.5714284;
 		  return x;
 		}
 	      }
 	      function specifyx(number){
 		if(number==1){
-		  x+=13.4;
+		  x+=13.44285714;
 		  return x;
 		}else if(number==2){
-		  x+=26.9;
+		  x+=26.88571428;
 		  return x;
 		}else if(number==3){
-		  x+=40.3;
+		  x+=40.32857142;
 		  return x;
 		}else if(number==4){
-		  x+=53.8;
+		  x+=53.77142856;
 		  return x;
 		}else if(number==5){
-		  x+=67.2;
+		  x+=67.2142857;
 		  return x;
 		}else if(number==6){
-		  x+=80.7;
+		  x+=80.65714284;
 		  return x;
 		}else if(number==7){
-		  x+=94.1;
+		  x+=94.09999999;
 		  return x;
 		}else if(number==8){
-		  x+=107.5;
+		  x+=107.5428571;
 		  return x;
 		}else if(number==9){
-		  x+=121;
+		  x+=120.9857143;
 		  return x;
 		}
 	      }
