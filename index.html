@@ -10,7 +10,7 @@
          font-family: Helvetica Narrow, sans-serif;
          text-align: center;}
         h2 {
-          color: RGB(0,0,255);
+          color: RGB(0,0,0);
           font-family: Helvetica Narrow, sans-serif;
           text-align: center;
         }
@@ -28,9 +28,21 @@
       	   visibility: hidden;
         }
 	p {
-          font-family: Courier New, Courier, Mono;
+          font-family: Helvetica Narrow, sans-serif;
           color: RGB(0,0,0);
           text-align: center;
+        }
+        input[type=text] {
+          border: none;
+          font-family: Helvetica Narrow, sans-serif;
+          border-bottom: 3px solid black;
+          padding: 0px 0px 5px;
+        }
+        input[type=number] {
+          border: none;
+          font-family: Helvetica Narrow, sans-serif;
+          border-bottom: 3px solid black;
+          padding: 0px 0px 5px;
         }
       </style>
     <h2>
@@ -39,25 +51,6 @@
 	  <canvas id="hrdiagram" width="1024" height="623"> </canvas>
     <font size="1"><p>Image Credits: https://www.thinglink.com/scene/372740071884849152</p></font>
     <form><center>
-      <style>
-        p {
-          font-family: Courier New, Courier, Mono;
-          color: RGB(0,0,0);
-          text-align: center;
-        }
-        input[type=text] {
-          border: none;
-          font-family: Courier New, Courier, Mono;
-          border-bottom: 4px solid black;
-          padding: 0px 0px 5px;
-        }
-        input[type=number] {
-          border: none;
-          font-family: Courier New, Courier, Mono;
-          border-bottom: 4px solid black;
-          padding: 0px 0px 5px;
-        }
-      </style>
       <p>Enter Absolute Magnitude (Y-Axis)</p>
       <div>
         <label for="Absolute Magnitude">Absolute Magnitude:</label>
