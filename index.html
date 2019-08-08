@@ -91,15 +91,20 @@
       <script>
 	var x=0;
 	var y=0;
-	window.onload = function() {
-	  var canvas = document.getElementById("hrdiagram");
-	  var ctx = canvas.getContext("2d");
-	  var img = document.getElementById("hr");
-	  ctx.drawImage(img, 0, 0);
-	  ctx.beginPath();
-	  ctx.arc(200,200,5,0,2*Math.PI);
-	  ctx.fill();
-	};
+	var allElementsX=[];
+	var allElementsY=[];
+	      function refresh(){
+		  window.onload = function() {
+		  var canvas = document.getElementById("hrdiagram");
+		  var ctx = canvas.getContext("2d");
+		  var img = document.getElementById("hr");
+		  for(var i=0;i<allElementsX.length;i++){
+			ctx.beginPath();
+			ctx.arc(allElementsX[i], allElementsY[i], 5, 0, 2 * Math.PI);
+			ctx.fill();
+		  }
+	     };
+	    refresh();
 	    function coordinates(){
 		x=0;
 		y=0;
@@ -108,11 +113,15 @@
 		var number=document.getElementById("Number").value;
 		x=determinex(letter);
 		x=specifyx(number);
+		allElementsX.push(x);
 		magnitude=magnitude*1;
 		magnitude=magnitude+15;
 		y=magnitude*14.37;
 		y=63+y;
+		allElementsY.push(y);
 		window.alert(x+","+y);
+		window.alert(allElementsX);
+		window.alert(allElementsY);
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
@@ -168,6 +177,7 @@
 		  return x;
 		}
 	      }
+	     }
     </script>
   </body>
 </html>
