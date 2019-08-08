@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,0);
+         color: RGB(0,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -98,10 +98,7 @@
 	var canvas = document.getElementById("hrdiagram");
 	var ctx = canvas.getContext("2d");
 	var img = document.getElementById("hr");
-	
-	window.onload = function() {
-	  ctx.drawImage(img, 0, 0);
-	};
+	ctx.drawImage(img, 0, 0);
 	    function refresh(){
 		  for(var i=0;i<allElementsX.length;i++){
 			allElementsX[i]=allElementsX[i]*1;
