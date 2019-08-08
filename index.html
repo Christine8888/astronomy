@@ -1,28 +1,37 @@
 <!doctype html>
 <html lang="en">
   <body>
-    <h1>
+     <div>
+	     <h1>Interactive Hertsprung-Russell Diagram</h1>
       <style>
        h1 {
          color: RGB(0,0,0);
-         font-family: Courier New, Courier, Mono;
+         font-family: Helvetica Narrow, sans-serif;
          text-align: center;}
+       div {
+	  width: 300px;
+	  border: 15px solid green;
+	  padding: 50px;
+	  margin: 20px;
+	  border-radius: 20px;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	}
       </style>
-      Interactive H-R Diagram
-    </h1>
-
+      </div>
     <h2>
       <style>
         h2 {
           color: RGB(0,0,255);
-          font-family: Courier New, Courier, Mono;
+          font-family: Helvetica Narrow, sans-serif;
           text-align: center;
         }
 	body{
 	  background-color:lightblue;	
 	}
       </style>
-        UniverseLink Labs
+        GRISM Summmer 2019
     </h2>
 	  <canvas id="hrdiagram" width="1024" height="623"> </canvas>
     <style>
