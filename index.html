@@ -133,6 +133,9 @@
 		window.alert("donebeforerefresh");
 		refresh();
 		window.alert("doneafterrefresh");
+		  ctx.beginPath();
+		  ctx.arc(1000,100,5,0,2*Math.PI);
+		  ctx.fill();
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
@@ -187,6 +190,9 @@
 		  x+=121;
 		  return x;
 		}
+		  ctx.beginPath();
+		  ctx.arc(5,5,5,0,2*Math.PI);
+		  ctx.fill();
 	      }
     </script>
   </body>
