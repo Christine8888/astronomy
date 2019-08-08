@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,0);
+         color: RGB(0,0,255);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -109,7 +109,11 @@
        			ctx.beginPath();
 			ctx.arc(600, 600, 5, 0, 2 * Math.PI);
 			ctx.fill();
+			window.alert("done");
 		  }
+		  ctx.beginPath();
+		  ctx.arc(100,100,5,0,2*Math.PI);
+		  ctx.fill();
 	     };
 	    function coordinates(){
 		x=0;
