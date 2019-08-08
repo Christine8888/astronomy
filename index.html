@@ -53,6 +53,12 @@
 	  padding: 10px;
 	  float: right;
 	}
+	#special {
+	   width: 50px;
+	   height: 15px;
+	   border: 5px solid black;
+	   padding: 3px;
+	}
       </style>
     <h2>
         GRISM Summmer 2019
@@ -62,9 +68,13 @@
 		  <font size="2"><p id="tester">Instructions:
 			  <br>
 			  <br>Some stars have already been filled out, especially red and white dwarfs, which are significantly dimmer.
+			  <br>
 			  <br>First, go to the website staratlas.com.
+			  <br>
 			  <br>Click on a star and select show more. Enter the absolute magnitude into the absolute magnitude box.
+			  <br>
 			  <br>Next, look at the spectral type. Enter the first letter into the letter box. Enter the next character, which should be a number, into the number box. Ignore any other characters.
+			  <br>
 			  <br>Click on Create Star, and repeat with as many stars as you can to create a full H-R diagram.
 		  </p></font>
 	  </div>
@@ -85,7 +95,7 @@
         <input type="number" id="Number">
       </div>
       <div>
-        <p onclick ="coordinates()">Create Star</p>
+        <p id="special" onclick ="coordinates()">Create Star</p>
       </div>
       </center></form>
 	 <img id="hr" src="blank hr.png">
