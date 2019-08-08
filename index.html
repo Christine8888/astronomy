@@ -10,7 +10,7 @@
     <h1>
       <style>
        h1 {
-         color: RGB(0,0,255);
+         color: RGB(0,0,0);
          font-family: Courier New, Courier, Mono;
          text-align: center;}
       </style>
@@ -109,8 +109,6 @@
        			ctx.beginPath();
 			ctx.arc(600, 600, 5, 0, 2 * Math.PI);
 			ctx.fill();
-			window.alert(allElementsX[i]);
-			window.alert(allElementsY[i]);
 		  }
 	     };
 	    function coordinates(){
@@ -127,7 +125,6 @@
 		y=magnitude*14.37;
 		y=63+y;
 		allElementsY.push(y);
-		window.alert(x+","+y);
 		refresh();
 	      }
 	      function determinex(letter){
