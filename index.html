@@ -20,7 +20,7 @@
     <h2>
       <style>
         h2 {
-          color: RGB(0,0,255);
+          color: RGB(0,0,0);
           font-family: Courier New, Courier, Mono;
           text-align: center;
         }
@@ -102,6 +102,12 @@
 	ctx.beginPath();
 	ctx.arc(10,600,5,0,2*Math.PI);
 	ctx.fill();
+test();
+function test(){
+	ctx.beginPath();
+ctx.arc(100, 75, 20, 0, 2 * Math.PI);
+ctx.stroke();
+}
 	    function refresh(){
 		  for(var i=0;i<allElementsX.length;i++){
 			allElementsX[i]=allElementsX[i]*1;
@@ -136,9 +142,6 @@
 		window.alert("donebeforerefresh");
 		refresh();
 		window.alert("doneafterrefresh");
-		  ctx.beginPath();
-		  ctx.arc(1000,100,5,0,2*Math.PI);
-		  ctx.fill();
 	      }
 	      function determinex(letter){
 		if(letter=="O"){
@@ -193,9 +196,6 @@
 		  x+=121;
 		  return x;
 		}
-		  ctx.beginPath();
-		  ctx.arc(5,5,5,0,2*Math.PI);
-		  ctx.fill();
 	      }
     </script>
   </body>
